@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  /* Brand Luxury Gold colors */
+  --color-gold-50: #fbf9f4;
+  --color-gold-100: #f3edd9;
+  --color-gold-200: #e6dbb5;
+  --color-gold-300: #d6c188;
+  --color-gold-400: #c6a75f;
+  --color-gold-500: #b8913d; /* Base Gold */
+  --color-gold-600: #9e772e;
+  --color-gold-700: #815e21;
+  --color-gold-800: #66491b;
+  --color-gold-900: #543b17;
+  --color-gold-950: #2d1e0a;
+  
+  /* Deep Corporate Navy colors */
+  --color-navy-50: #f4f6f8;
+  --color-navy-100: #e8ecf1;
+  --color-navy-200: #ccd6e1;
+  --color-navy-300: #a1b5cb;
+  --color-navy-400: #6f8cb0;
+  --color-navy-500: #4a6c95;
+  --color-navy-600: #395377;
+  --color-navy-700: #2f4362;
+  --color-navy-800: #1b263b; /* Deep Navy */
+  --color-navy-900: #0b111e; /* Darker Navy */
+  --color-navy-950: #05070c; /* Near Black */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-navy-950);
+    color: #e2e8f0;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #05070c;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1b263b;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8913d;
+  }
+}
+
+/* Custom premium classes */
+.gold-gradient {
+  background: linear-gradient(135deg, #f3edd9 0%, #c6a75f 50%, #815e21 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #f5eacf 0%, #c6a75f 50%, #9e772e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(198, 167, 95, 0.15);
+  border-color: rgba(198, 167, 95, 0.25);
+}
+
+.glassmorphism {
+  background: rgba(11, 17, 30, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glassmorphism-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Grid background elements */
+.grid-bg {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
